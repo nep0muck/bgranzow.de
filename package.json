@@ -1,0 +1,22 @@
+{
+  "name": "bgranzow.de",
+  "version": "1.0.0",
+  "description": "Website für Benjamin Granzow",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nep0muck/bgranzow.de.git"
+  },
+  "keywords": [
+    "Website"
+  ],
+  "author": "Mario Eichler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nep0muck/bgranzow.de/issues"
+  },
+  "homepage": "https://github.com/nep0muck/bgranzow.de#readme"
+}
