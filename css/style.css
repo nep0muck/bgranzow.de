@@ -1055,7 +1055,7 @@ html {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857;
   color: #333333;
@@ -5187,7 +5187,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5300,7 +5300,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5825,3 +5825,134 @@ ul.skills {
 .sub-title {
   font-size: 1.2em;
   color: #c5c5c5; }
+
+#sidebar {
+  text-align: center;
+  background: #e5e5e5;
+  min-height: 100%; }
+  #sidebar h2 {
+    font-size: 2rem;
+    font-weight: 700; }
+  #sidebar .sub-title {
+    font-size: 1.5rem;
+    font-weight: 300; }
+  #sidebar .portrait {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.25); }
+
+@media (min-width: 992px) {
+  .affix {
+    width: 25%; } }
+
+@media (min-width: 1200px) {
+  .affix {
+    width: 262px; } }
+
+/* + + + + Sidebar + + + + */
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* Toggle Styles */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled {
+  padding-left: 250px; }
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #333;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px; }
+
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px; }
+
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px; }
+
+/* Sidebar Styles */
+.sitebrand-header {
+  text-align: center;
+  padding-bottom: 20px; }
+  .sitebrand-header img {
+    margin: 30px 0 10px 0; }
+  .sitebrand-header h2 {
+    font-size: 2rem;
+    font-weight: 700; }
+  .sitebrand-header .sub-title {
+    font-size: 1.3rem;
+    font-weight: 300; }
+  .sitebrand-header .portrait {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 1px 13px rgba(0, 0, 0, 0.25); }
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .sidebar-nav ul {
+    margin: 0;
+    padding: 0; }
+  .sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+    border-bottom: 1px solid #111; }
+    .sidebar-nav li:first-child {
+      border-top: 1px solid #111; }
+    .sidebar-nav li a {
+      display: block;
+      text-decoration: none;
+      color: #999999; }
+      .sidebar-nav li a:hover {
+        text-decoration: none;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.2); }
+      .sidebar-nav li a:active, .sidebar-nav li a:focus {
+        text-decoration: none; }
+  .sidebar-nav .sidebar-brand a {
+    color: #999999; }
+    .sidebar-nav .sidebar-brand a:hover {
+      color: #fff;
+      background: none; }
+
+@media (min-width: 768px) {
+  #wrapper {
+    padding-left: 250px; }
+  #wrapper.toggled {
+    padding-left: 0; }
+  #sidebar-wrapper {
+    width: 250px; }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0; }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative; }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0; } }
