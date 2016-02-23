@@ -1,3 +1,9 @@
+$color-font-standard: #333
+$color-font-light: #999
+$color-font-hover: #666
+$background: #e5e5e5
+$color-border-light: #c5c5c5
+
 ul.skills
   -webkit-padding-start: 0px
   li
@@ -5,35 +11,48 @@ ul.skills
 
 .sub-title
   font-size: 1.2em
-  color: #c5c5c5
+  color: $color-font-light
 
-#sidebar
-  text-align: center
-  background: #e5e5e5
-  min-height: 100%
-  h2
-      font-size: 2rem
-      font-weight: 700
-  .sub-title
-      font-size: 1.5rem
-      font-weight: 300
+.cards
+  box-shadow: 0 1px 13px rgba(0,0,0,0.15)
+  margin-bottom: 2em
+  background: #fff
+  padding: 0
+  .entry-header
+    img
+      width: 100%
+      height: auto
+  .entry-category
+    width: 100%
+    padding: 1rem 4rem
+    box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)
+    font-weight: 700
+    &.closed.projects
+      color: #fff
+      background: #f15c5c
+    &.running.projects
+      color: #fff
+      background: #88dba3
+  .entry-title,
+  .entry-meta,
+  .entry-content,
+  .entry-footer
+    padding: 0 4rem
+  .entry-title
+    padding-top: 2rem
+  footer.entry-meta
+    padding-bottom: 4rem
+  .entry-meta
+    .glyphicon
+      margin-right: 1rem
+    .entry-date
+      margin-right: 2rem
 
-  .portrait
-      border-radius: 50%
-      border: 5px solid #fff
-      box-shadow: 0 1px 13px rgba(0,0,0,.25)
+#page-content-wrapper
+  background: $background
 
-.affix
-  @media (min-width: 992px)
-    width: 25%
-
-  @media (min-width: 1200px)
-    width: 262px
-
-
-
-
-
+.col-lg-12
+  max-width: 1420px
 
 /* + + + + Sidebar + + + + */
 
@@ -57,7 +76,6 @@ ul.skills
 #wrapper.toggled
     padding-left: 250px
 
-
 #sidebar-wrapper
     z-index: 1000
     position: fixed
@@ -66,7 +84,7 @@ ul.skills
     height: 100%
     margin-left: -250px
     overflow-y: auto
-    background: #333
+    background: $background
     -webkit-transition: all 0.5s ease
     -moz-transition: all 0.5s ease
     -o-transition: all 0.5s ease
@@ -103,8 +121,8 @@ ul.skills
     font-weight: 300
   .portrait
     border-radius: 50%
-    border: 5px solid #fff
-    box-shadow: 0 1px 13px rgba(0,0,0,.25)
+    // box-shadow: 0 1px 13px rgba(0,0,0,.25)
+    /* border: 5px solid #fff */
 
 .sidebar-nav
   position: absolute
@@ -119,25 +137,26 @@ ul.skills
   li
     text-indent: 20px
     line-height: 40px
-    border-bottom: 1px solid #111
+    border-bottom: 1px solid $color-border-light
     &:first-child
-      border-top: 1px solid #111
+      border-top: 1px solid $color-border-light
     a
       display: block
       text-decoration: none
-      color: #999999
+      color: $color-font-light
       &:hover
         text-decoration: none
-        color: #fff
-        background: rgba(255,255,255,0.2)
+        color: $color-font-hover
+        background: rgba(0,0,0,0.1)
       &:active,
       &:focus
         text-decoration: none
   .sidebar-brand
     a
-      color: #999999
+      color: $color-font-light
       &:hover
-        color: #fff
+        color: $color-font-hover
+        text-decoration: none
         background: none
 
 
@@ -162,3 +181,19 @@ ul.skills
     position: relative
     margin-right: 0
 
+
+
+/* menu-icon Hamburgerstyle */
+
+.menu-toggle-icon
+  padding: 1em
+
+#navicon
+  display: inline-block
+  width: 1.75em
+  height: .2em
+  line-height: 0
+  border-top: .8em double #000
+  border-bottom: .3em solid #000
+  &, &:before, &:after
+    box-sizing: content-box
