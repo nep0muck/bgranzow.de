@@ -5862,6 +5862,78 @@ ul.skills {
     .cards header .entry-meta .entry-date {
       margin-right: 2rem; }
 
+.cards-vertical {
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2em;
+  background: #fff;
+  padding: 0; }
+  .cards-vertical .entry-header {
+    padding-top: 15px; }
+    .cards-vertical .entry-header img {
+      max-width: 100%;
+      height: auto; }
+  .cards-vertical .entry-category {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    box-shadow: 0 5px 13px -5px rgba(0, 0, 0, 0.35);
+    font-weight: 700; }
+    .cards-vertical .entry-category.closed.projects {
+      color: #fff;
+      background: #f15c5c; }
+    .cards-vertical .entry-category.running.projects {
+      color: #fff;
+      background: #88dba3; }
+  .cards-vertical .entry-meta,
+  .cards-vertical footer.entry-meta {
+    padding-top: 15px; }
+  .cards-vertical .entry-meta {
+    color: #999;
+    font-size: .9em; }
+    .cards-vertical .entry-meta .glyphicon {
+      margin-right: 1rem; }
+    .cards-vertical .entry-meta .entry-date {
+      margin-right: 2rem; }
+
+.cards-vertical-2 {
+  box-shadow: 0 1px 13px rgba(0, 0, 0, 0.15);
+  margin-bottom: 2em;
+  background: #fff;
+  padding: 0; }
+  .cards-vertical-2 h2.entry-title {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px; }
+  .cards-vertical-2 .entry-header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center; }
+    .cards-vertical-2 .entry-header img {
+      max-width: 100%;
+      height: auto; }
+  .cards-vertical-2 .entry-category {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    /*box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)*/
+    font-weight: 700; }
+    .cards-vertical-2 .entry-category.closed.projects {
+      color: #fff;
+      background: #f15c5c; }
+    .cards-vertical-2 .entry-category.running.projects {
+      color: #fff;
+      background: #88dba3; }
+  .cards-vertical-2 .entry-meta,
+  .cards-vertical-2 footer.entry-meta {
+    padding-top: 15px; }
+  .cards-vertical-2 .entry-meta {
+    color: #999;
+    font-size: .9em; }
+    .cards-vertical-2 .entry-meta .glyphicon {
+      margin-right: 1rem; }
+    .cards-vertical-2 .entry-meta .entry-date {
+      margin-right: 2rem; }
+
 .hz-divider {
   font-size: 2em;
   margin: 1em 0;
@@ -5870,8 +5942,22 @@ ul.skills {
 #page-content-wrapper {
   background: #e5e5e5; }
 
-.col-lg-12 {
-  max-width: 1420px; }
+.row {
+  max-width: 1170px;
+  padding-left: -250px; }
+
+.shrink {
+  max-height: 50px; }
+  .shrink .navbar-brand {
+    height: auto; }
+
+.shrink-logo {
+  height: 20px;
+  width: 20px; }
+
+nav.navbar {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
 
 /* + + + + Sidebar + + + + */
 /*!
