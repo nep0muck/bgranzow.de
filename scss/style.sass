@@ -1,13 +1,39 @@
-$color-font-standard: #333
-$color-font-light: #999
-$color-font-hover: #666
-$background: #e5e5e5
-$color-border-light: #c5c5c5
+
+/* Variables */
+
+$color-font: #333
+$color-font-lightest: lighten($color-font, 60%)
+$color-font-lighter: lighten($color-font, 50%)
+$color-font-light: lighten($color-font, 30%)
+$color-font-hover: lighten($color-font, 20%)
+$background: #f7f7f7
+$color-grey-light: #f0f0f0
+$color-grey-dark: darken($color-grey-light, 5%)
+
+$color-green-light: #88dba3
+$color-red-light: #f15c5c
+
+=article-padding($padding)
+  padding-top: $padding
+  padding-bottom: $padding
+
+=box-shadow-left
+  -webkit-box-shadow: 0 0 30px 1px rgba(0,0,0,0.08)
+  box-shadow: 0 0 30px 1px rgba(0,0,0,0.08)
+
+
+/* Styles */
 
 ul.skills
   -webkit-padding-start: 0px
   li
     list-style-type: none
+
+.label-running
+  background-color: $color-green-light
+
+.label-finished
+  background-color: $color-red-light
 
 .sub-title
   font-size: 1.2em
@@ -17,6 +43,7 @@ ul.skills
   box-shadow: 0 1px 13px rgba(0,0,0,0.15)
   margin-bottom: 2em
   background: #fff
+  border: 1px solid $color-grey-light
   padding: 0
   .entry-header
     img
@@ -27,12 +54,6 @@ ul.skills
     padding: 1rem 4rem
     box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)
     font-weight: 700
-    &.closed.projects
-      color: #fff
-      background: #f15c5c
-    &.running.projects
-      color: #fff
-      background: #88dba3
   .entry-title,
   .entry-meta,
   .entry-content,
@@ -51,8 +72,8 @@ ul.skills
       .entry-date
         margin-right: 2rem
 
-
-
+h1
+  font-size: 10em
 
 
 
@@ -61,6 +82,7 @@ ul.skills
   box-shadow: 0 1px 13px rgba(0,0,0,0.15)
   margin-bottom: 2em
   background: #fff
+  border: 1px solid $color-grey-light
   padding: 0
   .entry-header
     padding-top: 15px
@@ -73,12 +95,6 @@ ul.skills
     padding: 1rem
     box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)
     font-weight: 700
-    &.closed.projects
-      color: #fff
-      background: #f15c5c
-    &.running.projects
-      color: #fff
-      background: #88dba3
   .entry-meta,
   footer.entry-meta
     padding-top: 15px
@@ -94,10 +110,10 @@ ul.skills
 
 
 .cards-vertical-2
-  box-shadow: 0 1px 13px rgba(0,0,0,0.15)
-  margin-bottom: 2em
-  background: #fff
-  padding: 0
+  // box-shadow: 0 1px 10px rgba(0,0,0,0.08)
+  +article-padding(4rem)
+  // background: #fff
+  // border: 1px solid $color-grey-light
   h2.entry-title
     font-size: 18px
     margin-top: 15px
@@ -109,56 +125,38 @@ ul.skills
     img
       max-width: 100%
       height: auto
+      border-radius: 50%
   .entry-category
     width: 100%
     text-align: center
     padding: 1rem
     /*box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)*/
     font-weight: 700
-    &.closed.projects
-      color: #fff
-      background: #f15c5c
-    &.running.projects
-      color: #fff
-      background: #88dba3
   .entry-meta,
   footer.entry-meta
     padding-top: 15px
   .entry-meta
-    color: $color-font-light
+    color: $color-font-lightest
     font-size: .9em
+    a
+      color: $color-font-lighter
+      &:hover
+        color: $color-font-light
     .glyphicon
       margin-right: 1rem
     .entry-date
-      margin-right: 2rem
+    .by-author
+      margin-left: 1.5rem
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.divider
+  margin-left: 1em
+  margin-right: 1em
+  color: $color-grey-dark
 
 .hz-divider
   font-size: 2em
   margin: 1em 0
-  color: $color-border-light
-
-#page-content-wrapper
-  background: $background
-
-.row
-  max-width: 1170px
-  padding-left: -250px
-
+  color: $color-grey-light
 
 .shrink
   max-height: 50px
@@ -177,7 +175,6 @@ nav.navbar
 
 /* + + + + Sidebar + + + + */
 
-
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
  * Code licensed under the Apache License v2.0.
@@ -187,44 +184,41 @@ nav.navbar
 /* Toggle Styles */
 
 #wrapper
-    padding-left: 0
-    -webkit-transition: all 0.5s ease
-    -moz-transition: all 0.5s ease
-    -o-transition: all 0.5s ease
-    transition: all 0.5s ease
-
+  padding-left: 0
+  -webkit-transition: all 0.5s ease
+  -moz-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
 
 #wrapper.toggled
-    padding-left: 250px
+  padding-left: 250px
 
 #sidebar-wrapper
-    z-index: 1000
-    position: fixed
-    left: 250px
-    width: 0
-    height: 100%
-    margin-left: -250px
-    overflow-y: auto
-    background: $background
-    -webkit-transition: all 0.5s ease
-    -moz-transition: all 0.5s ease
-    -o-transition: all 0.5s ease
-    transition: all 0.5s ease
-
+  // z-index: 1000
+  position: fixed
+  left: 250px
+  width: 0
+  height: 100%
+  margin-left: -250px
+  overflow-y: auto
+  background: $background
+  -webkit-transition: all 0.5s ease
+  -moz-transition: all 0.5s ease
+  -o-transition: all 0.5s ease
+  transition: all 0.5s ease
 
 #wrapper.toggled #sidebar-wrapper
-    width: 250px
-
+  width: 250px
 
 #page-content-wrapper
-    width: 100%
-    position: absolute
-    padding: 15px
-
+  width: 100%
+  position: absolute
+  background-color: #fff
+  +box-shadow-left
 
 #wrapper.toggled #page-content-wrapper
-    position: absolute
-    margin-right: -250px
+  position: absolute
+  margin-right: -250px
 
 
 /* Sidebar Styles */
@@ -258,9 +252,9 @@ nav.navbar
   li
     text-indent: 20px
     line-height: 40px
-    border-bottom: 1px solid $color-border-light
+    border-bottom: 1px solid $color-grey-dark
     &:first-child
-      border-top: 1px solid $color-border-light
+      border-top: 1px solid $color-grey-dark
     a
       display: block
       text-decoration: none
@@ -268,7 +262,7 @@ nav.navbar
       &:hover
         text-decoration: none
         color: $color-font-hover
-        background: rgba(0,0,0,0.1)
+        background: $color-grey-dark
       &:active,
       &:focus
         text-decoration: none
@@ -280,8 +274,7 @@ nav.navbar
         text-decoration: none
         background: none
 
-
-@media(min-width: 992px)
+@media(min-width: @screen-md-min)
   #wrapper
     padding-left: 250px
 
@@ -295,14 +288,16 @@ nav.navbar
     width: 0
 
   #page-content-wrapper
-    padding: 20px
     position: relative
 
   #wrapper.toggled #page-content-wrapper
     position: relative
     margin-right: 0
 
-
+@media (max-width: @screen-md-min)
+  .cards-vertical-2
+    +article-padding(6rem)
+    text-align: center
 
 /* menu-icon Hamburgerstyle */
 

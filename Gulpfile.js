@@ -25,6 +25,11 @@ var plumber = require('gulp-plumber');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
+var config = {
+    sassPath: './scss',
+    nodeDir: './node_modules'
+}
+
 /* Scripts task */
 gulp.task('scripts', function() {
   return gulp.src([
@@ -41,15 +46,19 @@ gulp.task('scripts', function() {
 
 /* Sass task */
 gulp.task('sass', function () {
-    gulp.src('scss/style.scss')
+    gulp.src(config.sassPath + '/style.scss')
     .pipe(plumber())
     .pipe(sass({
-        includePaths: ['scss'].concat(neat)
+        style: 'compressed',
+        includePaths: [
+            config.sassPath,
+            config.nodeDir + '/bootstrap-sass/assets/stylesheets',
+        ].concat(neat)
     }))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('./'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('./'))
     /* Reload the browser CSS after every change */
     .pipe(reload({stream:true}));
 });
