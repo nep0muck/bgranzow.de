@@ -26,7 +26,7 @@ $font-size-h4:            ceil(($font-size-base * 1.125)) // ~18px
 $font-size-h5:            $font-size-base
 $font-size-h6:            ceil(($font-size-base * 0.75)) // ~12px
 
-$padding-top: 4rem
+$padding-top: 6rem
 
 $margin-padding-base: 15px
 
@@ -83,13 +83,19 @@ body
 h1
   font-size: $font-size-h1
 
+.content-header
+  +article-padding($padding-top)
+  .page-header
+    margin: 0
 
 .cards-vertical-2
-  +article-padding($padding-top)
+  padding-bottom: $padding-top
   p
     line-height: $line-height
   & > div
     padding-bottom: $padding-top
+    &:last-child
+      padding-bottom: 0
   h2.entry-title
     font-size: $font-size-h2
     margin-top: $margin-padding-base
@@ -172,13 +178,6 @@ nav.navbar
   -moz-transition: all 0.5s ease
   -o-transition: all 0.5s ease
   transition: all 0.5s ease
-  .toggled
-    margin-left: 250px
-    #sidebar-wrapper
-      width: 250px
-    #page-content-wrapper
-      position: absolute
-      margin-right: -250px
   #sidebar-wrapper
     // z-index: 1000
     position: fixed
@@ -195,6 +194,13 @@ nav.navbar
   #page-content-wrapper
     width: 100%
     position: absolute
+  &.toggled
+    margin-left: 250px
+    #sidebar-wrapper
+      width: 250px
+    #page-content-wrapper
+      position: absolute
+      margin-right: -250px
 
 
 /* ---- Sidebar Styles ---- */
@@ -255,28 +261,31 @@ nav.navbar
 @media(min-width: $screen-md-min)
   #wrapper
     margin-left: 250px
-    .toggled
+    #sidebar-wrapper
+      width: 250px
+    #page-content-wrapper
+      position: relative
+    &.toggled
       margin-left: 0
       #sidebar-wrapper
         width: 0
       #page-content-wrapper
         position: relative
         margin-right: 0
-    #sidebar-wrapper
-      width: 250px
-    #page-content-wrapper
-      position: relative
+
 
 
 @media (max-width: $screen-md-min)
-  .cards-vertical-2
+  .content,
+  .content-header
     +article-padding(6rem)
     +article-padding-sides(3rem)
-    text-align: center
+    // text-align: center
 
 
 @media (min-width: $screen-md-min)
-  .cards-vertical-2
+  .content,
+  .content-header
     +article-padding-sides(100px)
 
 
