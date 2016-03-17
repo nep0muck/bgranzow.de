@@ -1,5 +1,5 @@
 
-/* Variables */
+/* ---- Variables ---- */
 
 $color-font: #333
 $color-font-lightest: lighten($color-font, 60%)
@@ -13,115 +13,91 @@ $color-grey-dark: darken($color-grey-light, 5%)
 $color-green-light: #88dba3
 $color-red-light: #f15c5c
 
+$font-size-base: 16px
+$line-height: 1.7
+
+$font-size-large:         ceil(($font-size-base * 1.125)) // ~18px
+$font-size-small:         ceil(($font-size-base * 0.75)) // ~12px
+
+$font-size-h1:            floor(($font-size-base * 2.25)) // ~36px
+$font-size-h2:            floor(($font-size-base * 1.875)) // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.5)) // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.125)) // ~18px
+$font-size-h5:            $font-size-base
+$font-size-h6:            ceil(($font-size-base * 0.75)) // ~12px
+
+$padding-top: 4rem
+
+$margin-padding-base: 15px
+
+
 =article-padding($padding)
   padding-top: $padding
   padding-bottom: $padding
+
+
+=article-padding-sides($padding)
+  padding-left: $padding
+  padding-right: $padding
+
 
 =box-shadow-left
   -webkit-box-shadow: 0 0 30px 1px rgba(0,0,0,0.08)
   box-shadow: 0 0 30px 1px rgba(0,0,0,0.08)
 
 
-/* Styles */
+/* ---- Styles ---- */
 
-ul.skills
-  -webkit-padding-start: 0px
-  li
-    list-style-type: none
+body
+  font-size: $font-size-base
+  line-height: $line-height
+
+html,
+body
+  height: 100%
+
+
+body
+  background: $background
+
+
+#wrapper
+  +box-shadow-left
+  background: #fff
+  min-height: 100%
+
 
 .label-running
   background-color: $color-green-light
 
+
 .label-finished
   background-color: $color-red-light
+
 
 .sub-title
   font-size: 1.2em
   color: $color-font-light
 
-.cards
-  box-shadow: 0 1px 13px rgba(0,0,0,0.15)
-  margin-bottom: 2em
-  background: #fff
-  border: 1px solid $color-grey-light
-  padding: 0
-  .entry-header
-    img
-      width: 100%
-      height: auto
-  .entry-category
-    width: 100%
-    padding: 1rem 4rem
-    box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)
-    font-weight: 700
-  .entry-title,
-  .entry-meta,
-  .entry-content,
-  .entry-footer
-    padding: 0 4rem
-  .entry-title
-    padding-top: 2rem
-  footer.entry-meta
-    padding-bottom: 4rem
-  header
-    .entry-meta
-      color: $color-font-light
-      font-size: .9em
-      .glyphicon
-        margin-right: 1rem
-      .entry-date
-        margin-right: 2rem
 
 h1
-  font-size: 10em
-
-
-
-
-.cards-vertical
-  box-shadow: 0 1px 13px rgba(0,0,0,0.15)
-  margin-bottom: 2em
-  background: #fff
-  border: 1px solid $color-grey-light
-  padding: 0
-  .entry-header
-    padding-top: 15px
-    img
-      max-width: 100%
-      height: auto
-  .entry-category
-    width: 100%
-    text-align: center
-    padding: 1rem
-    box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)
-    font-weight: 700
-  .entry-meta,
-  footer.entry-meta
-    padding-top: 15px
-  .entry-meta
-    color: $color-font-light
-    font-size: .9em
-    .glyphicon
-      margin-right: 1rem
-    .entry-date
-      margin-right: 2rem
-
-
+  font-size: $font-size-h1
 
 
 .cards-vertical-2
-  // box-shadow: 0 1px 10px rgba(0,0,0,0.08)
-  +article-padding(4rem)
-  // background: #fff
-  // border: 1px solid $color-grey-light
+  +article-padding($padding-top)
+  p
+    line-height: $line-height
+  & > div
+    padding-bottom: $padding-top
   h2.entry-title
-    font-size: 18px
-    margin-top: 15px
-    margin-bottom: 15px
+    font-size: $font-size-h2
+    margin-top: $margin-padding-base
+    margin-bottom: $margin-padding-base
   .entry-header
-    padding-top: 15px
-    padding-bottom: 15px
-    text-align: center
+    padding-top: $margin-padding-base
+    padding-bottom: $margin-padding-base
+    // text-align: center
     img
       max-width: 100%
       height: auto
@@ -129,15 +105,13 @@ h1
   .entry-category
     width: 100%
     text-align: center
-    padding: 1rem
-    /*box-shadow: 0 5px 13px -5px rgba(0,0,0,0.35)*/
     font-weight: 700
   .entry-meta,
   footer.entry-meta
-    padding-top: 15px
+    padding-top: $margin-padding-base
   .entry-meta
     color: $color-font-lightest
-    font-size: .9em
+    font-size: $font-size-small
     a
       color: $color-font-lighter
       &:hover
@@ -147,25 +121,34 @@ h1
     .entry-date
     .by-author
       margin-left: 1.5rem
+  .skills
+    ul
+      li
+        line-height: $line-height
+
 
 .divider
   margin-left: 1em
   margin-right: 1em
   color: $color-grey-dark
 
+
 .hz-divider
   font-size: 2em
   margin: 1em 0
   color: $color-grey-light
+
 
 .shrink
   max-height: 50px
   .navbar-brand
     height: auto
 
+
 .shrink-logo
   height: 20px
   width: 20px
+
 
 nav.navbar
   // Animation
@@ -173,7 +156,7 @@ nav.navbar
   transition: all 0.4s ease
 
 
-/* + + + + Sidebar + + + + */
+/* ---- Sidebar ---- */
 
 /*!
  * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
@@ -181,47 +164,40 @@ nav.navbar
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-/* Toggle Styles */
+/* ---- Toggle Styles ---- */
 
 #wrapper
-  padding-left: 0
+  margin-left: 0
   -webkit-transition: all 0.5s ease
   -moz-transition: all 0.5s ease
   -o-transition: all 0.5s ease
   transition: all 0.5s ease
-
-#wrapper.toggled
-  padding-left: 250px
-
-#sidebar-wrapper
-  // z-index: 1000
-  position: fixed
-  left: 250px
-  width: 0
-  height: 100%
-  margin-left: -250px
-  overflow-y: auto
-  background: $background
-  -webkit-transition: all 0.5s ease
-  -moz-transition: all 0.5s ease
-  -o-transition: all 0.5s ease
-  transition: all 0.5s ease
-
-#wrapper.toggled #sidebar-wrapper
-  width: 250px
-
-#page-content-wrapper
-  width: 100%
-  position: absolute
-  background-color: #fff
-  +box-shadow-left
-
-#wrapper.toggled #page-content-wrapper
-  position: absolute
-  margin-right: -250px
+  .toggled
+    margin-left: 250px
+    #sidebar-wrapper
+      width: 250px
+    #page-content-wrapper
+      position: absolute
+      margin-right: -250px
+  #sidebar-wrapper
+    // z-index: 1000
+    position: fixed
+    left: 250px
+    width: 0
+    height: 100%
+    margin-left: -250px
+    overflow-y: auto
+    // background: $background
+    -webkit-transition: all 0.5s ease
+    -moz-transition: all 0.5s ease
+    -o-transition: all 0.5s ease
+    transition: all 0.5s ease
+  #page-content-wrapper
+    width: 100%
+    position: absolute
 
 
-/* Sidebar Styles */
+/* ---- Sidebar Styles ---- */
 
 .sitebrand-header
   text-align: center
@@ -236,8 +212,7 @@ nav.navbar
     font-weight: 300
   .portrait
     border-radius: 50%
-    // box-shadow: 0 1px 13px rgba(0,0,0,.25)
-    /* border: 5px solid #fff */
+
 
 .sidebar-nav
   position: absolute
@@ -274,35 +249,42 @@ nav.navbar
         text-decoration: none
         background: none
 
-@media(min-width: @screen-md-min)
+
+/* ---- MEDIA QUERIES ---- */
+
+@media(min-width: $screen-md-min)
   #wrapper
-    padding-left: 250px
+    margin-left: 250px
+    .toggled
+      margin-left: 0
+      #sidebar-wrapper
+        width: 0
+      #page-content-wrapper
+        position: relative
+        margin-right: 0
+    #sidebar-wrapper
+      width: 250px
+    #page-content-wrapper
+      position: relative
 
-  #wrapper.toggled
-    padding-left: 0
 
-  #sidebar-wrapper
-    width: 250px
-
-  #wrapper.toggled #sidebar-wrapper
-    width: 0
-
-  #page-content-wrapper
-    position: relative
-
-  #wrapper.toggled #page-content-wrapper
-    position: relative
-    margin-right: 0
-
-@media (max-width: @screen-md-min)
+@media (max-width: $screen-md-min)
   .cards-vertical-2
     +article-padding(6rem)
+    +article-padding-sides(3rem)
     text-align: center
 
-/* menu-icon Hamburgerstyle */
+
+@media (min-width: $screen-md-min)
+  .cards-vertical-2
+    +article-padding-sides(100px)
+
+
+/* ---- menu-icon Hamburgerstyle ---- */
 
 .menu-toggle-icon
   padding: 1em
+
 
 #navicon
   display: inline-block
