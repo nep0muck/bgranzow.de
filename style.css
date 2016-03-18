@@ -5870,6 +5870,8 @@ h1 {
   .cards-vertical-2 .entry-header {
     padding-top: 15px;
     padding-bottom: 15px; }
+    .cards-vertical-2 .entry-header .image {
+      text-align: center; }
     .cards-vertical-2 .entry-header img {
       max-width: 100%;
       height: auto;
