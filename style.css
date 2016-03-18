@@ -5953,6 +5953,9 @@ nav.navbar {
       position: absolute;
       margin-right: -250px; }
 
+.light {
+  font-weight: lighter; }
+
 /* ---- Sidebar Styles ---- */
 .sitebrand-header {
   text-align: center;
@@ -6001,8 +6004,11 @@ nav.navbar {
       text-decoration: none;
       background: none; }
 
+.sidebar-right {
+  padding-right: 100px; }
+
 /* ---- MEDIA QUERIES ---- */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #wrapper {
     margin-left: 250px; }
     #wrapper #sidebar-wrapper {
@@ -6017,7 +6023,11 @@ nav.navbar {
         position: relative;
         margin-right: 0; } }
 
-@media (max-width: 992px) {
+@media (min-width: 1368px) {
+  #wrapper {
+    margin-right: 250px; } }
+
+@media (max-width: 1200px) {
   .content,
   .content-header {
     padding-top: 6rem;
@@ -6028,7 +6038,15 @@ nav.navbar {
 @media (min-width: 992px) {
   .content,
   .content-header {
+    padding-left: 50px;
+    padding-right: 50px; } }
+
+@media (min-width: 1200px) {
+  .content,
+  .content-header {
     padding-left: 100px;
+    padding-right: 100px; }
+  .content-header {
     padding-right: 100px; } }
 
 /* ---- menu-icon Hamburgerstyle ---- */

@@ -202,6 +202,9 @@ nav.navbar
       position: absolute
       margin-right: -250px
 
+.light
+  font-weight: lighter
+
 
 /* ---- Sidebar Styles ---- */
 
@@ -256,9 +259,12 @@ nav.navbar
         background: none
 
 
+.sidebar-right
+  padding-right: 100px
+
 /* ---- MEDIA QUERIES ---- */
 
-@media(min-width: $screen-md-min)
+@media(min-width: $screen-lg-min)
   #wrapper
     margin-left: 250px
     #sidebar-wrapper
@@ -274,19 +280,33 @@ nav.navbar
         margin-right: 0
 
 
+@media(min-width: 1368px)
+  #wrapper
+    margin-right: 250px
 
-@media (max-width: $screen-md-min)
+
+@media (max-width: $screen-lg-min)
   .content,
   .content-header
     +article-padding(6rem)
     +article-padding-sides(3rem)
     // text-align: center
 
-
 @media (min-width: $screen-md-min)
   .content,
   .content-header
-    +article-padding-sides(100px)
+    padding-left: 50px
+    padding-right: 50px
+
+@media (min-width: $screen-lg-min)
+  .content,
+  .content-header
+    padding-left: 100px
+    padding-right: 100px
+
+
+  .content-header
+    padding-right: 100px
 
 
 /* ---- menu-icon Hamburgerstyle ---- */
