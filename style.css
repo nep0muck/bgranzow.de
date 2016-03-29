@@ -5896,6 +5896,10 @@ h1 {
       margin-left: 1.5rem; }
   .cards-vertical-2 .skills ul li {
     line-height: 1.7; }
+  .cards-vertical-2 .skills .table td:first-child {
+    width: 30%; }
+  .cards-vertical-2 .skills .table .progress {
+    margin-bottom: 0; }
 
 .divider {
   margin-left: 1em;
