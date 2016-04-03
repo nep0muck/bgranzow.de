@@ -26,6 +26,8 @@ $font-size-h4:            ceil(($font-size-base * 1.125)) // ~18px
 $font-size-h5:            $font-size-base
 $font-size-h6:            ceil(($font-size-base * 0.75)) // ~12px
 
+$nav-text-height: 50px
+
 $padding-top: 6rem
 
 $margin-padding-base: 15px
@@ -80,11 +82,25 @@ body
   color: $color-font-light
 
 
+.navbar-white
+  background: none
+  padding: 3em 100px 1em
+  border: none
+  .navbar-brand
+    font-size: $font-size-h1
+    line-height: $nav-text-height
+    font-family: 'Roboto Slab', serif
+    font-weight: bold
+  .navbar-nav
+    li
+      a
+        line-height: $nav-text-height
+
 h1
   font-size: $font-size-h1
 
 .content-header
-  +article-padding($padding-top)
+  padding-bottom: $padding-top
   .page-header
     margin: 0
 

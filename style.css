@@ -5846,11 +5846,22 @@ body {
   font-size: 1.2em;
   color: gray; }
 
+.navbar-white {
+  background: none;
+  padding: 3em 100px 1em;
+  border: none; }
+  .navbar-white .navbar-brand {
+    font-size: 36px;
+    line-height: 50px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: bold; }
+  .navbar-white .navbar-nav li a {
+    line-height: 50px; }
+
 h1 {
   font-size: 36px; }
 
 .content-header {
-  padding-top: 6rem;
   padding-bottom: 6rem; }
   .content-header .page-header {
     margin: 0; }
