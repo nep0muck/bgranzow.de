@@ -8,7 +8,7 @@ $color-font-lightest: lighten($color-font, 60%)
 $color-font-lighter: lighten($color-font, 50%)
 $color-font-light: lighten($color-font, 30%)
 $color-font-hover: lighten($color-font, 20%)
-$background: #f7f7f7
+$background: #f1f1f1
 $color-grey-light: #f0f0f0
 $color-grey-dark: darken($color-grey-light, 5%)
 
@@ -30,8 +30,9 @@ $font-size-h6:            ceil(($font-size-base * 0.75)) // ~12px
 
 $nav-text-height: 50px
 
-$padding-top: 6rem
+$padding: 9rem
 
+$text-padding-top: 30px
 $margin-padding-base: 15px
 
 
@@ -88,7 +89,7 @@ body
 
 .navbar-white
   background: none
-  padding: 3em 100px 1em
+  padding: 3em $padding 1em
   border: none
   .navbar-brand
     font-size: $font-size-h1
@@ -104,26 +105,20 @@ h1
   font-size: $font-size-h1
 
 .content-header
-  padding-bottom: $padding-top
+  padding-bottom: $padding
   .page-header
     margin: 0
 
 .cards-vertical-2
-  padding-bottom: $padding-top
+  padding-top: $padding
+  padding-bottom: $padding
+  border-bottom: 1px solid $color-grey-dark
   p
     line-height: $line-height
   & > div
-    padding-bottom: $padding-top
     &:last-child
       padding-bottom: 0
-  h2.entry-title
-    font-size: $font-size-h2
-    margin-top: $margin-padding-base
-    margin-bottom: $margin-padding-base
   .entry-header
-    padding-top: $margin-padding-base
-    padding-bottom: $margin-padding-base
-    // text-align: center
     .image
       text-align: center
     img
@@ -135,8 +130,7 @@ h1
     text-align: center
     font-weight: 700
   .entry-meta,
-  footer.entry-meta
-    padding-top: $margin-padding-base
+    padding-top: $text-padding-top
   .entry-meta
     color: $color-font-lightest
     font-size: $font-size-small
@@ -149,6 +143,9 @@ h1
     .entry-date
     .by-author
       margin-left: 1.5rem
+  .entry-content
+    .btn
+      margin-top: 10px
   .skills
     ul
       li
@@ -226,6 +223,7 @@ nav.navbar
     transition: all 0.5s ease
   #page-content-wrapper
     width: 100%
+    max-width: 1170px
     position: absolute
   &.toggled
     margin-left: 300px
@@ -244,7 +242,7 @@ nav.navbar
 .sitebrand-header
   text-align: center
   padding-bottom: 20px
-  background: #f9f9f9
+  // background: lighten($background, 5%)
   img
     margin: 30px 0 10px 0
   h2
@@ -294,7 +292,7 @@ nav.navbar
 
 
 .sidebar-right
-  padding-right: 100px
+  padding-right: $padding
 
 /* ---- MEDIA QUERIES ---- */
 
@@ -331,18 +329,19 @@ nav.navbar
 @media (min-width: $screen-lg-min)
   article,
   .content-header
-    padding-left: 100px
-    padding-right: 100px
+    padding-left: $padding
+    padding-right: $padding
 
 
   .content-header
-    padding-right: 100px
+    padding-right: $padding
 
 
 /* ---- menu-icon Hamburgerstyle ---- */
 
 .menu-toggle-icon
-  padding: 1em
+  line-height: 12px
+  padding: 1.5em
 
 
 #navicon

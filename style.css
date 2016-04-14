@@ -5828,7 +5828,7 @@ body {
   height: 100%; }
 
 body {
-  background: #f7f7f7; }
+  background: #f1f1f1; }
 
 .content {
   -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.08);
@@ -5850,7 +5850,7 @@ body {
 
 .navbar-white {
   background: none;
-  padding: 3em 100px 1em;
+  padding: 3em 9rem 1em;
   border: none; }
   .navbar-white .navbar-brand {
     font-size: 36px;
@@ -5864,37 +5864,29 @@ h1 {
   font-size: 36px; }
 
 .content-header {
-  padding-bottom: 6rem; }
+  padding-bottom: 9rem; }
   .content-header .page-header {
     margin: 0; }
 
 .cards-vertical-2 {
-  padding-bottom: 6rem; }
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  border-bottom: 1px solid #e3e3e3; }
   .cards-vertical-2 p {
     line-height: 1.7; }
-  .cards-vertical-2 > div {
-    padding-bottom: 6rem; }
-    .cards-vertical-2 > div:last-child {
-      padding-bottom: 0; }
-  .cards-vertical-2 h2.entry-title {
-    font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px; }
-  .cards-vertical-2 .entry-header {
-    padding-top: 15px;
-    padding-bottom: 15px; }
-    .cards-vertical-2 .entry-header .image {
-      text-align: center; }
-    .cards-vertical-2 .entry-header img {
-      max-width: 100%;
-      height: auto; }
+  .cards-vertical-2 > div:last-child {
+    padding-bottom: 0; }
+  .cards-vertical-2 .entry-header .image {
+    text-align: center; }
+  .cards-vertical-2 .entry-header img {
+    max-width: 100%;
+    height: auto; }
   .cards-vertical-2 .entry-category {
     width: 100%;
     text-align: center;
     font-weight: 700; }
-  .cards-vertical-2 .entry-meta,
-  .cards-vertical-2 footer.entry-meta {
-    padding-top: 15px; }
+  .cards-vertical-2 .entry-meta {
+    padding-top: 30px; }
   .cards-vertical-2 .entry-meta {
     color: #cccccc;
     font-size: 12px; }
@@ -5906,6 +5898,8 @@ h1 {
       margin-right: 1rem; }
     .cards-vertical-2 .entry-meta .by-author {
       margin-left: 1.5rem; }
+  .cards-vertical-2 .entry-content .btn {
+    margin-top: 10px; }
   .cards-vertical-2 .skills ul li {
     line-height: 1.7; }
   .cards-vertical-2 .skills .table td:first-child {
@@ -5967,6 +5961,7 @@ nav.navbar {
     transition: all 0.5s ease; }
   #wrapper #page-content-wrapper {
     width: 100%;
+    max-width: 1170px;
     position: absolute; }
   #wrapper.toggled {
     margin-left: 300px; }
@@ -5982,8 +5977,7 @@ nav.navbar {
 /* ---- Sidebar Styles ---- */
 .sitebrand-header {
   text-align: center;
-  padding-bottom: 20px;
-  background: #f9f9f9; }
+  padding-bottom: 20px; }
   .sitebrand-header img {
     margin: 30px 0 10px 0; }
   .sitebrand-header h2 {
@@ -6027,7 +6021,7 @@ nav.navbar {
       background: none; }
 
 .sidebar-right {
-  padding-right: 100px; }
+  padding-right: 9rem; }
 
 /* ---- MEDIA QUERIES ---- */
 @media (min-width: 1200px) {
@@ -6056,14 +6050,15 @@ nav.navbar {
 @media (min-width: 1200px) {
   article,
   .content-header {
-    padding-left: 100px;
-    padding-right: 100px; }
+    padding-left: 9rem;
+    padding-right: 9rem; }
   .content-header {
-    padding-right: 100px; } }
+    padding-right: 9rem; } }
 
 /* ---- menu-icon Hamburgerstyle ---- */
 .menu-toggle-icon {
-  padding: 1em; }
+  line-height: 12px;
+  padding: 1.5em; }
 
 #navicon {
   display: inline-block;
