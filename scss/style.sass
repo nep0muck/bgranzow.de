@@ -1,7 +1,7 @@
 
 /* ---- Variables ---- */
 
-$screen-1280-up: 1281px
+$screen-1280-up: 1581px
 
 $color-font: #333
 $color-font-lightest: lighten($color-font, 60%)
@@ -65,14 +65,12 @@ body
   background: $background
 
 
-.container-fluid
-  max-width: 1170px
-
-
-#wrapper
+.content
   +box-shadow-left
+  max-width: 1170px
   background: #fff
   min-height: 100%
+  border: 1px solid $color-grey-dark
 
 
 .label-running
@@ -229,8 +227,6 @@ nav.navbar
   #page-content-wrapper
     width: 100%
     position: absolute
-    border-left: 1px solid #e3e3e3
-    border-right: 1px solid #e3e3e3
   &.toggled
     margin-left: 300px
     #sidebar-wrapper
@@ -325,10 +321,6 @@ nav.navbar
     +article-padding-sides(3rem)
     // text-align: center
 
-
-@media (min-width: $screen-1280-up)
-  #wrapper
-    margin-right: 300px
 
 @media (min-width: $screen-md-min)
   .content,
