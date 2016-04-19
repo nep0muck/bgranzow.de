@@ -5950,10 +5950,10 @@ nav.navbar {
   transition: all 0.5s ease; }
   #wrapper #sidebar-wrapper {
     position: fixed;
-    left: 300px;
+    left: 400px;
     width: 0;
     height: 100%;
-    margin-left: -300px;
+    margin-left: -400px;
     overflow-y: auto;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -5964,12 +5964,12 @@ nav.navbar {
     max-width: 1170px;
     position: absolute; }
   #wrapper.toggled {
-    margin-left: 300px; }
+    margin-left: 400px; }
     #wrapper.toggled #sidebar-wrapper {
-      width: 300px; }
+      width: 400px; }
     #wrapper.toggled #page-content-wrapper {
       position: absolute;
-      margin-right: -300px; }
+      margin-right: -400px; }
 
 .light {
   font-weight: lighter; }
@@ -5990,29 +5990,33 @@ nav.navbar {
 .sidebar-nav {
   position: absolute;
   top: 0;
-  width: 300px;
+  width: 400px;
   margin: 0;
   padding: 0;
-  list-style: none; }
-  .sidebar-nav ul {
+  list-style: none;
+  font-size: 1.5rem; }
+  .sidebar-nav div.col-md-12 {
+    border-bottom: 1px solid #e3e3e3;
+    padding: 1em 0; }
+  .sidebar-nav ul.nav {
     margin: 0;
     padding: 0; }
-  .sidebar-nav li {
-    text-indent: 40px;
-    line-height: 50px;
-    border-bottom: 1px solid #e3e3e3; }
-    .sidebar-nav li:first-child {
-      border-top: 1px solid #e3e3e3; }
-    .sidebar-nav li a {
-      display: block;
-      text-decoration: none;
-      color: gray; }
-      .sidebar-nav li a:hover {
+    .sidebar-nav ul.nav li {
+      text-indent: 40px;
+      line-height: 50px;
+      border-bottom: 1px solid #e3e3e3; }
+      .sidebar-nav ul.nav li:first-child {
+        border-top: 1px solid #e3e3e3; }
+      .sidebar-nav ul.nav li a {
+        display: block;
         text-decoration: none;
-        color: #666666;
-        background: #e3e3e3; }
-      .sidebar-nav li a:active, .sidebar-nav li a:focus {
-        text-decoration: none; }
+        color: gray; }
+        .sidebar-nav ul.nav li a:hover {
+          text-decoration: none;
+          color: #666666;
+          background: #e3e3e3; }
+        .sidebar-nav ul.nav li a:active, .sidebar-nav ul.nav li a:focus {
+          text-decoration: none; }
   .sidebar-nav .sidebar-brand a {
     color: gray; }
     .sidebar-nav .sidebar-brand a:hover {
@@ -6026,9 +6030,9 @@ nav.navbar {
 /* ---- MEDIA QUERIES ---- */
 @media (min-width: 1200px) {
   #wrapper {
-    margin-left: 300px; }
+    margin-left: 400px; }
     #wrapper #sidebar-wrapper {
-      width: 300px; }
+      width: 400px; }
     #wrapper #page-content-wrapper {
       position: relative; }
     #wrapper.toggled {

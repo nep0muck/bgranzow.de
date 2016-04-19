@@ -35,6 +35,8 @@ $padding: 9rem
 $text-padding-top: 30px
 $margin-padding-base: 15px
 
+$sidebar-width: 400px
+
 
 =article-padding($padding)
   padding-top: $padding
@@ -211,10 +213,10 @@ nav.navbar
   #sidebar-wrapper
     // z-index: 1000
     position: fixed
-    left: 300px
+    left: $sidebar-width
     width: 0
     height: 100%
-    margin-left: -300px
+    margin-left: -($sidebar-width)
     overflow-y: auto
     // background: $background
     -webkit-transition: all 0.5s ease
@@ -226,12 +228,12 @@ nav.navbar
     max-width: 1170px
     position: absolute
   &.toggled
-    margin-left: 300px
+    margin-left: $sidebar-width
     #sidebar-wrapper
-      width: 300px
+      width: $sidebar-width
     #page-content-wrapper
       position: absolute
-      margin-right: -300px
+      margin-right: -($sidebar-width)
 
 .light
   font-weight: lighter
@@ -258,30 +260,36 @@ nav.navbar
 .sidebar-nav
   position: absolute
   top: 0
-  width: 300px
+  width: $sidebar-width
   margin: 0
   padding: 0
   list-style: none
-  ul
+  font-size: 1.5rem
+
+  div.col-md-12
+    border-bottom: 1px solid $color-grey-dark
+    padding: 1em 0
+
+  ul.nav
     margin: 0
     padding: 0
-  li
-    text-indent: 40px
-    line-height: 50px
-    border-bottom: 1px solid $color-grey-dark
-    &:first-child
-      border-top: 1px solid $color-grey-dark
-    a
-      display: block
-      text-decoration: none
-      color: $color-font-light
-      &:hover
+    li
+      text-indent: 40px
+      line-height: 50px
+      border-bottom: 1px solid $color-grey-dark
+      &:first-child
+        border-top: 1px solid $color-grey-dark
+      a
+        display: block
         text-decoration: none
-        color: $color-font-hover
-        background: $color-grey-dark
-      &:active,
-      &:focus
-        text-decoration: none
+        color: $color-font-light
+        &:hover
+          text-decoration: none
+          color: $color-font-hover
+          background: $color-grey-dark
+        &:active,
+        &:focus
+          text-decoration: none
   .sidebar-brand
     a
       color: $color-font-light
@@ -298,9 +306,9 @@ nav.navbar
 
 @media(min-width: $screen-lg-min)
   #wrapper
-    margin-left: 300px
+    margin-left: $sidebar-width
     #sidebar-wrapper
-      width: 300px
+      width: $sidebar-width
     #page-content-wrapper
       position: relative
     &.toggled
