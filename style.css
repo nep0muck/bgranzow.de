@@ -5900,11 +5900,25 @@ h1 {
       margin-left: 1.5rem; }
   .cards-vertical-2 .entry-content .btn {
     margin-top: 10px; }
-  .cards-vertical-2 .skills ul li {
-    line-height: 1.7; }
+  .cards-vertical-2 .skills h2:first-child {
+    margin-top: 0; }
+  .cards-vertical-2 .skills .progress {
+    height: 2px; }
+  .cards-vertical-2 .skills ul {
+    list-style-type: none;
+    margin-top: 20px; }
+    .cards-vertical-2 .skills ul li {
+      line-height: 1.7;
+      padding: .5em 0 1em 0; }
   .cards-vertical-2 .skills .table td:first-child {
     width: 30%; }
   .cards-vertical-2 .skills .table .progress {
+    margin-bottom: 0; }
+  .cards-vertical-2 .blocks-about i {
+    font-size: 2em; }
+  .cards-vertical-2 .blocks-about.sitebrand-header img {
+    margin-top: 0; }
+  .cards-vertical-2 .blocks-about.sitebrand-header .sub-title {
     margin-bottom: 0; }
 
 .divider {
