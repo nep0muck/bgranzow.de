@@ -6048,7 +6048,7 @@ nav.navbar {
     padding-right: 3rem; } }
 
 @media (min-width: 1200px) {
-  article,
+  .cards-vertical-2,
   .content-header {
     padding-left: 9rem;
     padding-right: 9rem; }
