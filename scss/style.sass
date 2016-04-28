@@ -50,6 +50,12 @@ $margin-padding-base: 15px
   -webkit-box-shadow: 0 0 30px 1px rgba(0,0,0,0.08)
   box-shadow: 0 0 30px 1px rgba(0,0,0,0.08)
 
+=transition($timing, $duration)
+  transition-property: all
+  transition-delay: 0s
+  transition-duration: $duration
+  transition-timing-function: $timing
+
 
 /* ---- Styles ---- */
 
@@ -157,6 +163,13 @@ h1
       li
         line-height: $line-height
         padding: .5em 0 1em 0
+        &:hover
+          +transition(linear, .1s)
+          font-size: 2rem
+          font-weight: bold
+          .progress
+            +transition(linear, .1s)
+            height: 20px
     .table
       td:first-child
         width: 30%

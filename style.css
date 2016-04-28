@@ -5910,6 +5910,19 @@ h1 {
     .cards-vertical-2 .skills ul li {
       line-height: 1.7;
       padding: .5em 0 1em 0; }
+      .cards-vertical-2 .skills ul li:hover {
+        transition-property: all;
+        transition-delay: 0s;
+        transition-duration: 0.1s;
+        transition-timing-function: linear;
+        font-size: 2rem;
+        font-weight: bold; }
+        .cards-vertical-2 .skills ul li:hover .progress {
+          transition-property: all;
+          transition-delay: 0s;
+          transition-duration: 0.1s;
+          transition-timing-function: linear;
+          height: 20px; }
   .cards-vertical-2 .skills .table td:first-child {
     width: 30%; }
   .cards-vertical-2 .skills .table .progress {
