@@ -5911,6 +5911,8 @@ h1 {
       line-height: 1.7;
       padding: 1em 1em 1em 1em;
       margin: -0.5em -1em 0; }
+      .cards-vertical-2 .skills ul li .skill-level {
+        display: none; }
       .cards-vertical-2 .skills ul li:hover {
         -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.08);
         box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.08);
@@ -5923,6 +5925,8 @@ h1 {
         font-weight: bold;
         border: 1px solid #e3e3e3;
         border-radius: 4px; }
+        .cards-vertical-2 .skills ul li:hover .skill-level {
+          display: block; }
         .cards-vertical-2 .skills ul li:hover .progress {
           height: 20px; }
   .cards-vertical-2 .skills .table td:first-child {
