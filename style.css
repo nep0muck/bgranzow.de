@@ -5922,7 +5922,10 @@ h1 {
         transition-duration: 0.5s;
         transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         transform: scale(1.1) translate3d(0, 0, 0);
-        font-weight: bold; }
+        font-weight: bold;
+        margin-bottom: -26px; }
+        .cards-vertical-2 .skills ul li:hover:last-child {
+          margin-bottom: -18px; }
         .cards-vertical-2 .skills ul li:hover .skill-level {
           display: block; }
         .cards-vertical-2 .skills ul li:hover .progress {
