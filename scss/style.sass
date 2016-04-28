@@ -170,14 +170,17 @@ h1
         margin: -0.5em -1em 0
         .skill-level
           display: none
+          font-weight: normal
+        .progress-bar
+          background-color: $color-font-light
         &:hover
-          +box-shadow-left
+          // +box-shadow-left
           +transition-bobble(.5s, transform)
-          background: #fff
+          // background: #fff
           transform: scale(1.1) translate3d(0,0,0)
           font-weight: bold
-          border: 1px solid $color-grey-dark
-          border-radius: 4px
+          // border: 1px solid $color-grey-dark
+          // border-radius: 4px
           .skill-level
             display: block
           .progress
