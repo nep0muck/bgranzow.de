@@ -5909,19 +5909,21 @@ h1 {
     margin-top: 20px; }
     .cards-vertical-2 .skills ul li {
       line-height: 1.7;
-      padding: .5em 0 1em 0; }
+      padding: 1em 1em 1em 1em;
+      margin: -0.5em -1em 0; }
       .cards-vertical-2 .skills ul li:hover {
-        transition-property: all;
+        -webkit-box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.08);
+        box-shadow: 0 0 30px 1px rgba(0, 0, 0, 0.08);
+        transition-property: transform;
         transition-delay: 0s;
-        transition-duration: 0.1s;
-        transition-timing-function: linear;
-        font-size: 2rem;
-        font-weight: bold; }
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background: #fff;
+        transform: scale(1.1) translate3d(0, 0, 0);
+        font-weight: bold;
+        border: 1px solid #e3e3e3;
+        border-radius: 4px; }
         .cards-vertical-2 .skills ul li:hover .progress {
-          transition-property: all;
-          transition-delay: 0s;
-          transition-duration: 0.1s;
-          transition-timing-function: linear;
           height: 20px; }
   .cards-vertical-2 .skills .table td:first-child {
     width: 30%; }
