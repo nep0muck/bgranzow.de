@@ -52,7 +52,6 @@ gulp.task('sass', function () {
         style: 'compressed',
         includePaths: [
             config.sassPath,
-            config.nodeDir + '/bootstrap-sass/assets/stylesheets',
         ].concat(neat)
     }))
     .pipe(gulp.dest('./'))
