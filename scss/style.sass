@@ -35,6 +35,8 @@ $padding: 9rem
 $text-padding-top: 30px
 $margin-padding-base: 15px
 
+$comment-margin: 1em
+
 
 =article-padding($padding)
   padding-top: $padding
@@ -73,6 +75,13 @@ body
   background: $background
 
 
+a
+  color: $color-font
+  &:hover
+    color: $color-font-lightest
+    text-decoration: none
+
+
 .content
   +box-shadow-left
   max-width: 1170px
@@ -81,11 +90,11 @@ body
   border: 1px solid $color-grey-dark
 
 
-.label-running
+.label-projects
   background-color: $color-green-light
 
 
-.label-finished
+.label-portfolio
   background-color: $color-red-light
 
 
@@ -139,11 +148,16 @@ h1
     width: 100%
     text-align: center
     font-weight: 700
-  .entry-meta,
-    padding-top: $text-padding-top
   .entry-meta
+    padding-top: $text-padding-top
     color: $color-font-lightest
     font-size: $font-size-small
+    .entry-category
+      a
+        color: #fff
+        &:hover
+          color: #fff
+          text-decoration: none
     a
       color: $color-font-lighter
       &:hover
@@ -194,7 +208,6 @@ h1
       .progress
         margin-bottom: 0
 
-
   .blocks-about
     i
       font-size: 2em
@@ -203,6 +216,29 @@ h1
         margin-top: 0
       .sub-title
         margin-bottom: 0
+
+
+.pagination
+  text-align: center
+  width: 100%
+  padding-top: ($padding/2)
+  padding-bottom: ($padding/2)
+
+  a
+    color: $color-font
+
+    &:hover
+      background-color: $color-grey-light
+      text-decoration: none
+      color: $color-font-hover
+
+  .page-numbers
+    padding: .5em
+    display: inline-block
+
+  .current
+    background-color: $color-grey-light
+    color: $color-font-hover
 
 
 .divider
@@ -241,6 +277,12 @@ nav.navbar
   transition: all 0.4s ease
 
 
+footer
+  color: $color-font-lighter
+  padding-top: ($padding/2)
+  padding-bottom: ($padding/2)
+
+
 /* ---- Sidebar ---- */
 
 /*!
@@ -270,7 +312,8 @@ nav.navbar
     -moz-transition: all 0.5s ease
     -o-transition: all 0.5s ease
     transition: all 0.5s ease
-  #page-content-wrapper
+  #page-content-wrapper,
+  > footer
     width: 100%
     max-width: 1170px
     position: absolute
@@ -406,3 +449,44 @@ nav.navbar
   &, &:before, &:after
     box-sizing: content-box
 
+
+/* ---- comment styling ---- */
+
+.comments
+  > ul
+    // remove first intending of ul in chrome browser
+    margin-left: 0
+    -webkit-margin-before: 0
+    -webkit-padding-start: 0
+
+li.comment
+  list-style-type: none
+  margin-bottom: $comment-margin
+
+  .comment-body
+    padding: $comment-margin 0
+
+    .comment-author
+      background-color: $background
+      margin-bottom: $comment-margin
+
+      img
+        margin-right: $comment-margin
+
+  .comment-meta
+    color: $color-font-lightest
+    font-size: $font-size-small
+    margin-bottom: $comment-margin
+
+    a
+      color: $color-font-lightest
+      &:hover
+        color: $color-font-hover
+
+  .reply
+    a
+      color: $color-font-lightest
+      font-size: $font-size-small
+      text-decoration: underline
+      &:hover
+        color: $color-font-hover

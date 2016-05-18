@@ -5838,10 +5838,10 @@ body {
   min-height: 100%;
   border: 1px solid #e3e3e3; }
 
-.label-running {
+.label-projects {
   background-color: #88dba3; }
 
-.label-finished {
+.label-portfolio {
   background-color: #f15c5c; }
 
 .sub-title {
@@ -5886,10 +5886,14 @@ h1 {
     text-align: center;
     font-weight: 700; }
   .cards-vertical-2 .entry-meta {
-    padding-top: 30px; }
-  .cards-vertical-2 .entry-meta {
+    padding-top: 30px;
     color: #cccccc;
     font-size: 12px; }
+    .cards-vertical-2 .entry-meta .entry-category a {
+      color: #fff; }
+      .cards-vertical-2 .entry-meta .entry-category a:hover {
+        color: #fff;
+        text-decoration: none; }
     .cards-vertical-2 .entry-meta a {
       color: #b3b3b3; }
       .cards-vertical-2 .entry-meta a:hover {

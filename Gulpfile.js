@@ -27,7 +27,8 @@ var reload = browserSync.reload;
 
 var config = {
     sassPath: './scss',
-    nodeDir: './node_modules'
+    nodeDir: './node_modules',
+    wpDir: 'C:/xampp/htdocs/wordpress/wp-content/themes/bgranzowsixteen',
 }
 
 /* Scripts task */
@@ -54,10 +55,12 @@ gulp.task('sass', function () {
             config.sassPath,
         ].concat(neat)
     }))
-    .pipe(gulp.dest('./'))
+    //.pipe(gulp.dest('./'))
+    .pipe(gulp.dest(config.wpDir))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifycss())
-    .pipe(gulp.dest('./'))
+    //.pipe(gulp.dest('./'))
+    .pipe(gulp.dest(config.wpDir))
     /* Reload the browser CSS after every change */
     .pipe(reload({stream:true}));
 });
@@ -73,13 +76,13 @@ gulp.task('browser-sync', function() {
         /*
         I like to use a vhost, WAMP guide: https://www.kristengrote.com/blog/articles/how-to-set-up-virtual-hosts-using-wamp, XAMP guide: http://sawmac.com/xampp/virtualhosts/
         */
-        //proxy: 'your_dev_site.url'
+        proxy: 'http://localhost:8080/wordpress/'
         /* For a static server you would use this: */
-
+        /*
         server: {
             baseDir: './'
         }
-
+        */
     });
 });
 
@@ -89,6 +92,8 @@ gulp.task('default', ['sass', 'browser-sync'], function () {
     gulp.watch(['scss/*.scss', 'scss/**/*.scss', 'scss/*.sass', 'scss/**/*.sass'], ['sass'])
     /* Watch app.js file, run the scripts task on change. */
     gulp.watch(['js/app.js'], ['scripts'])
+    /* Watch .css files, run the bs-reload task on change. */
+    gulp.watch(['*.css'], ['bs-reload']);
     /* Watch .html files, run the bs-reload task on change. */
     gulp.watch(['*.html'], ['bs-reload']);
 });
