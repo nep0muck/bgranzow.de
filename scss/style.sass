@@ -452,6 +452,7 @@ footer
 
 /* ---- comment styling ---- */
 
+
 .comments
   > ul
     // remove first intending of ul in chrome browser
@@ -459,34 +460,39 @@ footer
     -webkit-margin-before: 0
     -webkit-padding-start: 0
 
-li.comment
-  list-style-type: none
-  margin-bottom: $comment-margin
-
-  .comment-body
-    padding: $comment-margin 0
-
-    .comment-author
-      background-color: $background
-      margin-bottom: $comment-margin
-
-      img
-        margin-right: $comment-margin
-
-  .comment-meta
-    color: $color-font-lightest
+  .required
+    color: $color-font-lighter
     font-size: $font-size-small
+
+  li.comment
+    list-style-type: none
     margin-bottom: $comment-margin
 
-    a
-      color: $color-font-lightest
-      &:hover
-        color: $color-font-hover
+    .comment-body
+      padding: $comment-margin 0
 
-  .reply
-    a
+      .comment-author
+        background-color: $background
+        margin-bottom: $comment-margin
+
+        img
+          margin-right: $comment-margin
+
+    .comment-meta
       color: $color-font-lightest
       font-size: $font-size-small
-      text-decoration: underline
-      &:hover
-        color: $color-font-hover
+      margin-bottom: $comment-margin
+
+      a
+        color: $color-font-lightest
+        &:hover
+          color: $color-font-hover
+
+    .reply
+      a
+        color: $color-font-lightest
+        font-size: $font-size-small
+        text-decoration: underline
+        &:hover
+          color: $color-font-hover
+
