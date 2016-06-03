@@ -76,9 +76,9 @@ body
 
 
 a
-  color: $color-font
+  color: $color-font-lighter
   &:hover
-    color: $color-font-lightest
+    color: $color-font-hover
     text-decoration: none
 
 
@@ -103,21 +103,6 @@ a
   color: $color-font-light
 
 
-.navbar-white
-  background: none
-  padding: 3em $padding 1em
-  border: none
-  .navbar-brand
-    font-size: $font-size-h1
-    line-height: $nav-text-height
-    font-family: 'Roboto Slab', serif
-    font-weight: bold
-  .navbar-nav
-    li
-      a
-        line-height: $nav-text-height
-
-
 h1
   font-size: $font-size-h1
 
@@ -134,9 +119,15 @@ h1
   border-bottom: 1px solid $color-grey-dark
   p
     line-height: $line-height
+    &:last-child
+      margin-bottom: 0
   & > div
     &:last-child
       padding-bottom: 0
+  .entry-title
+    font-weight: 700
+    margin-top: 40px
+    margin-bottom: 20px
   .entry-header
     .image
       text-align: center
@@ -145,9 +136,8 @@ h1
       height: auto
       // border-radius: 50%
   .entry-category
-    width: 100%
     text-align: center
-    font-weight: 700
+
   .entry-meta
     padding-top: $text-padding-top
     color: $color-font-lightest
@@ -155,6 +145,7 @@ h1
     .entry-category
       a
         color: #fff
+        font-weight: 700
         &:hover
           color: #fff
           text-decoration: none
@@ -169,7 +160,7 @@ h1
       margin-left: 1.5rem
   .entry-content
     .btn
-      margin-top: 10px
+      margin-top: 30px
   .skills
     h2:first-child
       margin-top: 0
@@ -209,7 +200,8 @@ h1
         margin-bottom: 0
 
   .blocks-about
-    i
+    .blocks-about-icon
+      text-align: right
       font-size: 2em
     &.sitebrand-header
       img
@@ -388,6 +380,98 @@ footer
   padding-right: $padding
 
 
+/* ---- menu-icon Hamburgerstyle ---- */
+
+.menu-toggle-icon
+  line-height: 12px
+  padding: 1.5em
+
+
+#navicon
+  display: inline-block
+  width: 1.75em
+  height: .2em
+  line-height: 0
+  border-top: .8em double #000
+  border-bottom: .3em solid #000
+  &, &:before, &:after
+    box-sizing: content-box
+
+
+.required
+  color: $color-font-lighter
+  font-size: $font-size-small
+
+
+/* ---- comment styling ---- */
+
+.comments
+  > ul
+    // remove first intending of ul in chrome browser
+    margin-left: 0
+    -webkit-margin-before: 0
+    -webkit-padding-start: 0
+
+  li.comment
+    list-style-type: none
+    margin-bottom: $comment-margin
+
+    hr
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: 40px
+
+    .comment-body
+      padding: $comment-margin 0
+
+      .comment-author
+        margin-bottom: $comment-margin
+
+        .avatar.photo
+          border-radius: 50%
+          margin-right: $comment-margin
+
+    div.avatar,
+    .credentials
+      float: left
+
+    .comment-meta-date
+      float: right
+      margin-right: 15px
+
+    .credentials,
+    .comment-meta-date
+      line-height: 96px
+
+      a
+        font-size: $font-size-small
+
+    .reply
+      a
+        font-size: $font-size-small
+        text-decoration: underline
+
+
+/* ---- contact form 7 styling ---- */
+
+div
+  .wpcf7-response-output
+    border-radius: 4px
+
+  .wpcf7-mail-sent-ok
+    color: #fff
+    background-color: #5cb85c
+    border-color: #4cae4c
+
+  .wpcf7-validation-errors
+    color: #fff
+    background-color: #f0ad4e
+    border-color: #eea236
+
+  .wpcf7-not-valid-tip
+    color: #d43f3a
+
+
 /* ---- MEDIA QUERIES ---- */
 
 @media(min-width: $screen-lg-min)
@@ -407,10 +491,10 @@ footer
 
 
 @media (max-width: $screen-lg-min)
-  .content,
-  .content-header
-    +article-padding(6rem)
-    +article-padding-sides(3rem)
+  //.content,
+  //.content-header
+    //+article-padding(6rem)
+    //+article-padding-sides(3rem)
     // text-align: center
 
 
@@ -432,67 +516,53 @@ footer
     padding-right: $padding
 
 
-/* ---- menu-icon Hamburgerstyle ---- */
+@media (max-width: $screen-md-min)
+  .cards-vertical-2 .blocks-about .blocks-about-icon
+    text-align: center
+    font-size: 4em
 
-.menu-toggle-icon
-  line-height: 12px
-  padding: 1.5em
+  .blocks-about-heading
+    text-align: center
+
+  .cards-vertical-2
+    padding-top: ($padding/3)
+    padding-bottom: ($padding/3)
+
+    .entry-meta
+      .divider
+        display: none
+
+      // Changing layout of .entry-meta children to vertical
+      .date,
+      .entry-category,
+      .comments
+        display: block
+        text-align: center
+        padding-bottom: .35em
+
+    .entry-title
+      text-align: center
 
 
-#navicon
-  display: inline-block
-  width: 1.75em
-  height: .2em
-  line-height: 0
-  border-top: .8em double #000
-  border-bottom: .3em solid #000
-  &, &:before, &:after
-    box-sizing: content-box
+  .comments
+    li.comment
+      div.avatar,
+      .credentials,
+      .comment-meta-date
+        float: none
+        line-height: 1.7
+        display: block
+        padding-bottom: .35em
+        margin-right: 0
+
+      .comment-body
+        .comment-author
+          text-align: center
+
+          .avatar.photo
+            margin-right: 0
 
 
-/* ---- comment styling ---- */
 
 
-.comments
-  > ul
-    // remove first intending of ul in chrome browser
-    margin-left: 0
-    -webkit-margin-before: 0
-    -webkit-padding-start: 0
-
-  .required
-    color: $color-font-lighter
-    font-size: $font-size-small
-
-  li.comment
-    list-style-type: none
-    margin-bottom: $comment-margin
-
-    .comment-body
-      padding: $comment-margin 0
-
-      .comment-author
-        background-color: $background
-        margin-bottom: $comment-margin
-
-        img
-          margin-right: $comment-margin
-
-    .comment-meta
-      color: $color-font-lightest
-      font-size: $font-size-small
-      margin-bottom: $comment-margin
-
-      a
-        color: $color-font-lightest
-        &:hover
-          color: $color-font-hover
-
-    .reply
-      a
-        color: $color-font-lightest
-        font-size: $font-size-small
-        text-decoration: underline
-        &:hover
-          color: $color-font-hover
 
